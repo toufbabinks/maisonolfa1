@@ -4,7 +4,9 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Catalogue Maison Olfa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+
 
   <style>
     body {
@@ -23,14 +25,17 @@
       padding: 1rem;
       background: #fcd0f8;
     }
-    h1 {
-       margin:.2rem 0 .2rem;
-  font-size:clamp(1.9rem, 4vw, 2.6rem);
-  letter-spacing:.5px;
-  color:#cc3366;            /* ou ta couleur précédente */
-  font-family:"Plus Jakarta Sans", system-ui, sans-serif;
-  font-weight:700;
-    }
+   h1 {
+  margin:.2rem 0 .15rem;
+  font-size:clamp(2.1rem,4.6vw,3.1rem);
+  font-family:"Cormorant Garamond", serif;
+  font-weight:600;
+  letter-spacing:.3px;
+  color:#000000;
+  line-height:1.04;
+}
+
+
     .search-bar {
       margin: 1rem;
       display: flex;
@@ -67,7 +72,7 @@
       right: 10px;
       font-size: 0.75rem;
       background: #ffeef3;
-      color: #cc3366;
+      color: #fa198a;
       padding: 0.3rem 0.6rem;
       border-radius: 0.6rem;
     }
@@ -182,46 +187,65 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       cursor: pointer;
     }.
-    /* Bandeau défilant bas d'écran */
-.top-banner-wrapper{
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  overflow:hidden;
-  background:#000;
-  z-index:999;
-  border-top:1px solid #222;
-  font-family:inherit;
-}
-.top-banner{
-  display:flex;
-  width:max-content;
-  gap:3rem;
-  padding:.45rem 1.2rem;
-  font-weight:600;
-  font-size:.72rem;
-  letter-spacing:.5px;
-  color:#fff;
+
+
+
+.mini-subtitle {
+  margin:.25rem 0 0;
+  font-size:.7rem;
+  font-weight:500;
+  letter-spacing:.6px;
+  color:#555;
   text-transform:uppercase;
-  white-space:nowrap;
-  animation:scrollX 25s linear infinite;
 }
-.top-banner span{ white-space:nowrap; }
-@keyframes scrollX{
-  from{ transform:translateX(0); }
-  to{ transform:translateX(-50%); }
+ /* Bandeau défilant fixé en bas */
+.top-banner-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  z-index: 999;
+  border-top: 1px solid #222;
+  font-family: inherit;
 }
-@media (max-width:600px){
-  .top-banner{ font-size:.65rem; gap:2rem; }
+.top-banner {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  padding: .45rem 1.2rem;
+  font-weight: 600;
+  font-size: .72rem;
+  letter-spacing: .5px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: scrollX 25s linear infinite;
 }
-@media (prefers-reduced-motion: reduce){
-  .top-banner{ animation:none; }
+.top-banner span {
+  white-space: nowrap;
+}
+@keyframes scrollX {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (max-width: 600px) {
+  .top-banner {
+    font-size: .65rem;
+    gap: 2rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .top-banner {
+    animation: none;
+  }
 }
 
-/* Laisse de la place au bandeau pour ne pas cacher le contenu */
-body { padding-bottom:38px; }
-
+/* Empêche le contenu d’être caché sous le bandeau */
+body {
+  padding-bottom: 38px;
+}
     </style>
 
 
@@ -229,7 +253,14 @@ body { padding-bottom:38px; }
   <h1>Catalogue Maison Olfa</h1>
   <p style="margin:.3rem 0 0; font-weight:600; color:#993254;">
     Vos senteurs préférées à prix réduit
+    
+
   </p>
+  
+<p class="mini-subtitle">Les dupes de meilleure qualité sont ici</p>
+
+  
+
 </header>
 
 <div class="search-section">
@@ -237,11 +268,14 @@ body { padding-bottom:38px; }
     <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Rechercher un parfum...">
   </div>
   <div class="social-buttons">
-    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp">WhatsApp</a>
-    <a href="https://www.instagram.com/maison_olfa" target="_blank" class="instagram">Instagram</a>
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp">📲 WhatsApp</a>
+    <a href="https://www.instagram.com/maison_olfa" target="_blank" class="instagram">📸 Instagram</a>
   </div>
-  <p style="text-align:center; margin: -0.3rem 0 1.2rem; font-size:0.9rem; color:#555;">
+  <p style="text-align:center; margin: -0.3rem 0 1.2rem; font-size:1rem; color:#555;">
     Pour commander, contactez-nous sur nos réseaux.
+  </p>
+  <p style="text-align:center; margin: -0.3rem 0 1.2rem; font-size:1.4rem; color:#555;">
+    LIVRAISON GRATUITE EN MAIN PROPRE AUTOUR DE MONTPELLIER
   </p>
 </div>
 
@@ -1836,6 +1870,30 @@ body { padding-bottom:38px; }
   </script>
 
     <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Haut</button>
+    <!-- Banderole défilante bas d'écran -->
+<div class="top-banner-wrapper" aria-label="Informations défilantes">
+  <div class="top-banner" id="promoBanner">
+    <span>Dupes de très bonne qualité, très fidèles</span>
+    <span>Créés en laboratoire français</span>
+    <span>30% d'essence de parfum</span>
+    <span>Livrés en main propre autour de Montpellier</span>
+    <span>Livraison possible partout en France</span>
+<span>📸 Instagram: @maison_olfa</span>
+<span>📲 WhatsApp: 1234567890</span>
+
+
+    <!-- On répète pour assurer un flux continu -->
+    <span>Dupes de très bonne qualité, très fidèles</span>
+    <span>Créés en laboratoire français</span>
+    <span>30% d'essence de parfum</span>
+    <span>Livrés en main propre autour de Montpellier</span>
+    <span>Livraison possible partout en France</span>
+    <span>📸 Instagram: @maison_olfa</span>
+<span>📲 WhatsApp: 1234567890</span>
+
+  </div>
+</div>
+
     </body>
     
 </html>
