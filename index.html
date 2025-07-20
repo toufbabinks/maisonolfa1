@@ -1,0 +1,1888 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catalogue Maison Olfa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf7;
+      color: #333;
+    }
+
+    header {
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+      background-color: #ffeef3;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      margin-bottom: 0.3rem;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #cc3366;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-bar {
+      margin: 1rem auto;
+      max-width: 400px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 2rem;
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+      padding: 1rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .parfum-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #cc3366;
+    }
+
+    .code {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: #ffe4ec;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.75rem;
+      border-radius: 0.5rem;
+      color: #cc3366;
+    }
+
+    .prices {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .inline-actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .inline-actions a {
+      background-color: #cc3366;
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .inline-actions a:hover {
+      background-color: #b32a5a;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+
+<header>
+  <div style="position: absolute; top: 1rem; right: 1rem; display: flex; gap: 0.5rem;">
+    <a href="https://wa.me/1234567890" target="_blank" style="background:#25d366; color:white; padding:0.4rem 0.9rem; border-radius:2rem; font-size:0.9rem; text-decoration:none;">WhatsApp</a>
+    <a href="https://www.instagram.com/maison_olfa" target="_blank" style="background:#e1306c; color:white; padding:0.4rem 0.9rem; border-radius:2rem; font-size:0.9rem; text-decoration:none;">Instagram</a>
+  </div>
+
+  <h1>Catalogue Maison Olfa</h1>
+  <div class="subtitle">Vos senteurs préférés à prix réduits</div>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Rechercher un parfum..." onkeyup="filterCards()" />
+  </div>
+</header>
+
+<div class="grid" id="cardContainer">
+  
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#1</div>
+      <img src="img/1.jpg" alt="ONE MILLION" class="parfum-img" />
+      <h2>One Million</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#2</div>
+      <img src="img/2.jpg" alt="ACQUA DI GIO" class="parfum-img" />
+      <h2>Acqua Di Gio</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#3</div>
+      <img src="img/3.jpg" alt="FARHENHEIT" class="parfum-img" />
+      <h2>Farhenheit</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#4</div>
+      <img src="img/4.jpg" alt="THE ONE" class="parfum-img" />
+      <h2>The One</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#6</div>
+      <img src="img/6.jpg" alt="OPIUM" class="parfum-img" />
+      <h2>Opium</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#7</div>
+      <img src="img/7.jpg" alt="J'ADORE" class="parfum-img" />
+      <h2>J'Adore</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#10</div>
+      <img src="img/10.jpg" alt="ALIEN" class="parfum-img" />
+      <h2>Alien</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#11</div>
+      <img src="img/11.jpg" alt="LIGHT BLUE FOR HER" class="parfum-img" />
+      <h2>Light Blue For Her</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#12</div>
+      <img src="img/12.jpg" alt="EAU SAUVAGE" class="parfum-img" />
+      <h2>Eau Sauvage</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#14</div>
+      <img src="img/14.jpg" alt="MANIFESTO" class="parfum-img" />
+      <h2>Manifesto</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#15</div>
+      <img src="img/15.jpg" alt="ROMA UOMO" class="parfum-img" />
+      <h2>Roma Uomo</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#16</div>
+      <img src="img/16.jpg" alt="LE MÂLE" class="parfum-img" />
+      <h2>Le Mâle</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#18</div>
+      <img src="img/18.jpg" alt="DECLARATION" class="parfum-img" />
+      <h2>Declaration</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#19</div>
+      <img src="img/19.jpg" alt="LADY MILLION" class="parfum-img" />
+      <h2>Lady Million</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#20</div>
+      <img src="img/20.jpg" alt=" LA NUIT DE L'HOMME" class="parfum-img" />
+      <h2> La Nuit De L'Homme</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#21</div>
+      <img src="img/21.jpg" alt="LIGHT BLUE FOR HIM" class="parfum-img" />
+      <h2>Light Blue For Him</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#22</div>
+      <img src="img/22.jpg" alt="TERRE D'HERMES" class="parfum-img" />
+      <h2>Terre D'Hermes</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#23</div>
+      <img src="img/23.jpg" alt="HYPNOTIC POISON" class="parfum-img" />
+      <h2>Hypnotic Poison</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#24</div>
+      <img src="img/24.jpg" alt="CHANEL N°5" class="parfum-img" />
+      <h2>Chanel N°5</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#25</div>
+      <img src="img/25.jpg" alt="FOR HER" class="parfum-img" />
+      <h2>For Her</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#26</div>
+      <img src="img/26.jpg" alt="FLOWER" class="parfum-img" />
+      <h2>Flower</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#27</div>
+      <img src="img/27.jpg" alt="TRESOR" class="parfum-img" />
+      <h2>Tresor</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#28</div>
+      <img src="img/28.jpg" alt="ANGEL" class="parfum-img" />
+      <h2>Angel</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#29</div>
+      <img src="img/29.jpg" alt="L'EAU D'ISSEY" class="parfum-img" />
+      <h2>L'Eau D'Issey</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#30</div>
+      <img src="img/30.jpg" alt="BLACK XS" class="parfum-img" />
+      <h2>Black Xs</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#31</div>
+      <img src="img/31.jpg" alt="BLV BULGARI" class="parfum-img" />
+      <h2>Blv Bulgari</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#32</div>
+      <img src="img/32.jpg" alt="SPICE BOMB" class="parfum-img" />
+      <h2>Spice Bomb</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#33</div>
+      <img src="img/33.jpg" alt="BLACK CODE" class="parfum-img" />
+      <h2>Black Code</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#37</div>
+      <img src="img/37.jpg" alt="MAN DE BVLGARI" class="parfum-img" />
+      <h2>Man De Bvlgari</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#38</div>
+      <img src="img/38.jpg" alt="BLEU CHANEL" class="parfum-img" />
+      <h2>Bleu Chanel</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#39</div>
+      <img src="img/39.jpg" alt="MISS DIOR CHERIE" class="parfum-img" />
+      <h2>Miss Dior Cherie</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#40</div>
+      <img src="img/40.jpg" alt="HYPNOSE" class="parfum-img" />
+      <h2>Hypnose</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#42</div>
+      <img src="img/42.jpg" alt="LA VIE EST BELLE" class="parfum-img" />
+      <h2>La Vie Est Belle</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#44</div>
+      <img src="img/44.jpg" alt="SILVER MOUNTAIN" class="parfum-img" />
+      <h2>Silver Mountain</h2>
+      <div class="prices">
+        <div class="price">30 ML : 25.50€</div><div class="price">70 ML : 48.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#47</div>
+      <img src="img/47.jpg" alt="CRYSTAL NOIR" class="parfum-img" />
+      <h2>Crystal Noir</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#48</div>
+      <img src="img/48.jpg" alt="ALLURE HOMME" class="parfum-img" />
+      <h2>Allure Homme</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#49</div>
+      <img src="img/49.jpg" alt="DOLCE" class="parfum-img" />
+      <h2>Dolce</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#51</div>
+      <img src="img/51.jpg" alt="COCO MADEMOISELLE" class="parfum-img" />
+      <h2>Coco Mademoiselle</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#52</div>
+      <img src="img/52.jpg" alt="PASHA 150 CARTIER" class="parfum-img" />
+      <h2>Pasha 150 Cartier</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#53</div>
+      <img src="img/53.jpg" alt="NARCISO" class="parfum-img" />
+      <h2>Narciso</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#54</div>
+      <img src="img/54.jpg" alt="BLACK ORCHID" class="parfum-img" />
+      <h2>Black Orchid</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#55</div>
+      <img src="img/55.jpg" alt="BLACK OPIUM" class="parfum-img" />
+      <h2>Black Opium</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#56</div>
+      <img src="img/56.jpg" alt="ANGE OU DEMON" class="parfum-img" />
+      <h2>Ange Ou Demon</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#57</div>
+      <img src="img/57.jpg" alt="OMNIA AMETHYSTE" class="parfum-img" />
+      <h2>Omnia Amethyste</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#60</div>
+      <img src="img/60.jpg" alt="MILLESIME IMPERIAL" class="parfum-img" />
+      <h2>Millesime Imperial</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#61</div>
+      <img src="img/61.jpg" alt="INVICTUS" class="parfum-img" />
+      <h2>Invictus</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#62</div>
+      <img src="img/62.jpg" alt="INTENSO" class="parfum-img" />
+      <h2>Intenso</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#64</div>
+      <img src="img/64.jpg" alt="OMNIA INDIAN GARNET" class="parfum-img" />
+      <h2>Omnia Indian Garnet</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#66</div>
+      <img src="img/66.jpg" alt="SCENT INTENSE" class="parfum-img" />
+      <h2>Scent Intense</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#67</div>
+      <img src="img/67.jpg" alt="OLYMPEA" class="parfum-img" />
+      <h2>Olympea</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#68</div>
+      <img src="img/68.jpg" alt="AVENTUS" class="parfum-img" />
+      <h2>Aventus</h2>
+      <div class="prices">
+        <div class="price">30 ML : 29.50€</div><div class="price">70 ML : 57.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#69</div>
+      <img src="img/69.jpg" alt="ACQUA DI SALE" class="parfum-img" />
+      <h2>Acqua Di Sale</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#70</div>
+      <img src="img/70.jpg" alt="THE ONE" class="parfum-img" />
+      <h2>The One</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#71</div>
+      <img src="img/71.jpg" alt="ALLURE FEMME" class="parfum-img" />
+      <h2>Allure Femme</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#72</div>
+      <img src="img/72.jpg" alt="PATCHOULI" class="parfum-img" />
+      <h2>Patchouli</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#73</div>
+      <img src="img/73.jpg" alt="HIMALAYA" class="parfum-img" />
+      <h2>Himalaya</h2>
+      <div class="prices">
+        <div class="price">30 ML : 25.50€</div><div class="price">70 ML : 48.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#74</div>
+      <img src="img/74.jpg" alt="BLACK AFGANO" class="parfum-img" />
+      <h2>Black Afgano</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#75</div>
+      <img src="img/75.jpg" alt="X FOR MEN" class="parfum-img" />
+      <h2>X For Men</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#76</div>
+      <img src="img/76.jpg" alt="ACQUA DI GIOIA" class="parfum-img" />
+      <h2>Acqua Di Gioia</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#78</div>
+      <img src="img/78.jpg" alt="ULTRAVIOLET MAN" class="parfum-img" />
+      <h2>Ultraviolet Man</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#81</div>
+      <img src="img/81.jpg" alt="CLASSIQUE ESSENCE" class="parfum-img" />
+      <h2>Classique Essence</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#82</div>
+      <img src="img/82.jpg" alt="SIGNORINA" class="parfum-img" />
+      <h2>Signorina</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#84</div>
+      <img src="img/84.jpg" alt="DYLAN BLUE" class="parfum-img" />
+      <h2>Dylan Blue</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#85</div>
+      <img src="img/85.jpg" alt="CHANCE" class="parfum-img" />
+      <h2>Chance</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#86</div>
+      <img src="img/86.jpg" alt="LEGEND" class="parfum-img" />
+      <h2>Legend</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#87</div>
+      <img src="img/87.jpg" alt="WANTED" class="parfum-img" />
+      <h2>Wanted</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#88</div>
+      <img src="img/88.jpg" alt="MAN IN BLACK" class="parfum-img" />
+      <h2>Man In Black</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#89</div>
+      <img src="img/89.jpg" alt="MON PARIS" class="parfum-img" />
+      <h2>Mon Paris</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#90</div>
+      <img src="img/90.jpg" alt="POISON GIRL" class="parfum-img" />
+      <h2>Poison Girl</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#91</div>
+      <img src="img/91.jpg" alt="CHROME" class="parfum-img" />
+      <h2>Chrome</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#93</div>
+      <img src="img/93.jpg" alt="AVENTUS FOR HER" class="parfum-img" />
+      <h2>Aventus For Her</h2>
+      <div class="prices">
+        <div class="price">30 ML : 29.50€</div><div class="price">70 ML : 57.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#94</div>
+      <img src="img/94.jpg" alt="SAUVAGE" class="parfum-img" />
+      <h2>Sauvage</h2>
+      <div class="prices">
+        <div class="price">30 ML : 25.50€</div><div class="price">70 ML : 48.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#96</div>
+      <img src="img/96.jpg" alt="GABRIELLE" class="parfum-img" />
+      <h2>Gabrielle</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#97</div>
+      <img src="img/97.jpg" alt="AMO" class="parfum-img" />
+      <h2>Amo</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#98</div>
+      <img src="img/98.jpg" alt="JOY" class="parfum-img" />
+      <h2>Joy</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#99</div>
+      <img src="img/99.jpg" alt="MANDARINO DI AMALFI" class="parfum-img" />
+      <h2>Mandarino Di Amalfi</h2>
+      <div class="prices">
+        <div class="price">30 ML : 23.50€</div><div class="price">70 ML : 45.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#100</div>
+      <img src="img/100.jpg" alt="WHITE AOUD" class="parfum-img" />
+      <h2>White Aoud</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#101</div>
+      <img src="img/101.jpg" alt="VELVET AMBER SKIN" class="parfum-img" />
+      <h2>Velvet Amber Skin</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#102</div>
+      <img src="img/102.jpg" alt="VELVET AMBER SUN" class="parfum-img" />
+      <h2>Velvet Amber Sun</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#105</div>
+      <img src="img/105.jpg" alt="INTENSE CAFE" class="parfum-img" />
+      <h2>Intense Cafe</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#106</div>
+      <img src="img/106.jpg" alt="FUCKING FABULOUS" class="parfum-img" />
+      <h2>Fucking Fabulous</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#108</div>
+      <img src="img/108.jpg" alt="GREEN IRISH TWEED" class="parfum-img" />
+      <h2>Green Irish Tweed</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#109</div>
+      <img src="img/109.jpg" alt="J'ADORE L'OR" class="parfum-img" />
+      <h2>J'Adore L'Or</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#110</div>
+      <img src="img/110.jpg" alt="KIRKE" class="parfum-img" />
+      <h2>Kirke</h2>
+      <div class="prices">
+        <div class="price">30 ML : 25.50€</div><div class="price">70 ML : 48.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#111</div>
+      <img src="img/111.jpg" alt="LOST CHERRY" class="parfum-img" />
+      <h2>Lost Cherry</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#112</div>
+      <img src="img/112.jpg" alt="NEROLI PORTOFINO" class="parfum-img" />
+      <h2>Neroli Portofino</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#113</div>
+      <img src="img/113.jpg" alt="SUR LA ROUTE" class="parfum-img" />
+      <h2>Sur La Route</h2>
+      <div class="prices">
+        <div class="price">30 ML : 29.50€</div><div class="price">70 ML : 57.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#114</div>
+      <img src="img/114.jpg" alt="OMBRE NOMADE" class="parfum-img" />
+      <h2>Ombre Nomade</h2>
+      <div class="prices">
+        <div class="price">30 ML : 25.50€</div><div class="price">70 ML : 48.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#115</div>
+      <img src="img/115.jpg" alt="IDOLE" class="parfum-img" />
+      <h2>Idole</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#116</div>
+      <img src="img/116.jpg" alt="YES I AM" class="parfum-img" />
+      <h2>Yes I Am</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#117</div>
+      <img src="img/117.jpg" alt="TOBACCO VANILLE" class="parfum-img" />
+      <h2>Tobacco Vanille</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#118</div>
+      <img src="img/118.jpg" alt="BACCARAT ROUGE 540" class="parfum-img" />
+      <h2>Baccarat Rouge 540</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#119</div>
+      <img src="img/119.jpg" alt="SCANDAL" class="parfum-img" />
+      <h2>Scandal</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#120</div>
+      <img src="img/120.jpg" alt="MA ROBE VELOURS" class="parfum-img" />
+      <h2>Ma Robe Velours</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#121</div>
+      <img src="img/121.jpg" alt="L'INTERDIT" class="parfum-img" />
+      <h2>L'Interdit</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#122</div>
+      <img src="img/122.jpg" alt="LIBRE YSL" class="parfum-img" />
+      <h2>Libre Ysl</h2>
+      <div class="prices">
+        <div class="price">30 ML : 25.50€</div><div class="price">70 ML : 48.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#123</div>
+      <img src="img/123.jpg" alt="GOOD GIRL GONE BAD" class="parfum-img" />
+      <h2>Good Girl Gone Bad</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#124</div>
+      <img src="img/124.jpg" alt="ZETA MORPH" class="parfum-img" />
+      <h2>Zeta Morph</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#125</div>
+      <img src="img/125.jpg" alt="SOLE DI POSITANO ACQUA" class="parfum-img" />
+      <h2>Sole Di Positano Acqua</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#126</div>
+      <img src="img/126.jpg" alt="SOLEIL BLANC" class="parfum-img" />
+      <h2>Soleil Blanc</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#127</div>
+      <img src="img/127.jpg" alt="OUD WOOD" class="parfum-img" />
+      <h2>Oud Wood</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#128</div>
+      <img src="img/128.jpg" alt="VANILLE FATALE" class="parfum-img" />
+      <h2>Vanille Fatale</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#129</div>
+      <img src="img/129.jpg" alt="XERJOFF ERBA PURA" class="parfum-img" />
+      <h2>Xerjoff Erba Pura</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#130</div>
+      <img src="img/130.jpg" alt="MEGAMARE ORTO PARISI" class="parfum-img" />
+      <h2>Megamare Orto Parisi</h2>
+      <div class="prices">
+        <div class="price">50 ML : 65.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#131</div>
+      <img src="img/131.jpg" alt="GOOD GIRL" class="parfum-img" />
+      <h2>Good Girl</h2>
+      <div class="prices">
+        <div class="price">30 ML : 25.50€</div><div class="price">70 ML : 48.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#132</div>
+      <img src="img/132.jpg" alt="MY WAY" class="parfum-img" />
+      <h2>My Way</h2>
+      <div class="prices">
+        <div class="price">30 ML : 23.50€</div><div class="price">70 ML : 45.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#133</div>
+      <img src="img/133.jpg" alt="PARADOXE" class="parfum-img" />
+      <h2>Paradoxe</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#134</div>
+      <img src="img/134.jpg" alt="BITTER PEACH" class="parfum-img" />
+      <h2>Bitter Peach</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#135</div>
+      <img src="img/135.jpg" alt="BOIS D'ARGENT" class="parfum-img" />
+      <h2>Bois D'Argent</h2>
+      <div class="prices">
+        <div class="price">30 ML : 29.50€</div><div class="price">70 ML : 57.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#136</div>
+      <img src="img/136.jpg" alt="HOMME INTENSE" class="parfum-img" />
+      <h2>Homme Intense</h2>
+      <div class="prices">
+        <div class="price">30 ML : 23.50€</div><div class="price">70 ML : 45.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#137</div>
+      <img src="img/137.jpg" alt="1861 NAXOS DE XERJOFF" class="parfum-img" />
+      <h2>1861 Naxos De Xerjoff</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#138</div>
+      <img src="img/138.jpg" alt="WOOD WHISPER DE OJAR" class="parfum-img" />
+      <h2>Wood Whisper De Ojar</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#139</div>
+      <img src="img/139.jpg" alt="LES SABLES ROSES" class="parfum-img" />
+      <h2>Les Sables Roses</h2>
+      <div class="prices">
+        <div class="price">50 ML : 65.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#140</div>
+      <img src="img/140.jpg" alt="EROS" class="parfum-img" />
+      <h2>Eros</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#141</div>
+      <img src="img/141.jpg" alt="TURATH SPIRIT" class="parfum-img" />
+      <h2>Turath Spirit</h2>
+      <div class="prices">
+        <div class="price">50 ML : 65.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#142</div>
+      <img src="img/142.jpg" alt="OMBRE LEATHER" class="parfum-img" />
+      <h2>Ombre Leather</h2>
+      <div class="prices">
+        <div class="price">30 ML : 29.50€</div><div class="price">70 ML : 57.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#143</div>
+      <img src="img/143.jpg" alt="VANILLA POWDER" class="parfum-img" />
+      <h2>Vanilla Powder</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#144</div>
+      <img src="img/144.jpg" alt="BIANCO LATTE" class="parfum-img" />
+      <h2>Bianco Latte</h2>
+      <div class="prices">
+        <div class="price">50 ML : 52.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#145</div>
+      <img src="img/145.jpg" alt="DEVOTION" class="parfum-img" />
+      <h2>Devotion</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#205</div>
+      <img src="img/205.jpg" alt="HUGO FOR HIM" class="parfum-img" />
+      <h2>Hugo For Him</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#213</div>
+      <img src="img/213.jpg" alt="GUILTY FOR HER" class="parfum-img" />
+      <h2>Guilty For Her</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#217</div>
+      <img src="img/217.jpg" alt="GUILTY FOR HIM" class="parfum-img" />
+      <h2>Guilty For Him</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#241</div>
+      <img src="img/241.jpg" alt="CHLOE" class="parfum-img" />
+      <h2>Chloe</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#243</div>
+      <img src="img/243.jpg" alt="LOVE CHLOE" class="parfum-img" />
+      <h2>Love Chloe</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#246</div>
+      <img src="img/246.jpg" alt="CK ONE" class="parfum-img" />
+      <h2>Ck One</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#250</div>
+      <img src="img/250.jpg" alt="BURBERRY FOR MEN" class="parfum-img" />
+      <h2>Burberry For Men</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#263</div>
+      <img src="img/263.jpg" alt="HUGO FOR HER" class="parfum-img" />
+      <h2>Hugo For Her</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#265</div>
+      <img src="img/265.jpg" alt="THE SCENT" class="parfum-img" />
+      <h2>The Scent</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#277</div>
+      <img src="img/277.jpg" alt="FLORA" class="parfum-img" />
+      <h2>Flora</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#283</div>
+      <img src="img/283.jpg" alt="UOMO" class="parfum-img" />
+      <h2>Uomo</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#292</div>
+      <img src="img/292.jpg" alt="MR. BURBERRY" class="parfum-img" />
+      <h2>Mr. Burberry</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="card" onclick="toggleActions(this)">
+      <div class="code">#295</div>
+      <img src="img/295.jpg" alt="BURBERRY WOMAN" class="parfum-img" />
+      <h2>Burberry Woman</h2>
+      <div class="prices">
+        <div class="price">30 ML : 18.00€</div><div class="price">70 ML : 35.00€</div>
+      </div>
+      <div class="inline-actions hidden">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/maisonolfa" target="_blank">Instagram</a>
+      </div>
+    </div>
+    
+</div>
+
+<script>
+  function filterCards() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      const name = card.querySelector('h2').textContent.toLowerCase();
+      card.style.display = name.includes(input) ? 'block' : 'none';
+    });
+  }
+
+  function toggleActions(card) {
+    const actions = card.querySelector('.inline-actions');
+    actions.classList.toggle('hidden');
+  }
+</script>
+
+</body>
+</html>
+
+<footer style="text-align:center; padding:2rem 0; background:#fff2f7;">
+  <a href="https://wa.me/1234567890" target="_blank" style="background:#25d366; color:white; padding:0.6rem 1.2rem; margin: 0 0.5rem; border-radius:2rem; font-size:1rem; text-decoration:none;">Commander sur WhatsApp</a>
+  <a href="https://www.instagram.com/maison_olfa" target="_blank" style="background:#e1306c; color:white; padding:0.6rem 1.2rem; margin: 0 0.5rem; border-radius:2rem; font-size:1rem; text-decoration:none;">Commander sur Instagram</a>
+</footer>
+</body>
+</html>
