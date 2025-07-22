@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Catalogue Maison Olfa</title>
  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+ <!-- à mettre dans <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&display=swap" rel="stylesheet">
+
+
 
 
 
@@ -12,7 +17,7 @@
     body {
       margin: 0;
       font-family: sans-serif;
-      background: #fffaf7;
+      background: #fdfbfa;
       
     }
     body {
@@ -23,7 +28,7 @@
     header {
       text-align: center;
       padding: 1rem;
-      background: #f1decf;
+      background: #74866e;
     }
    h1 {
   margin:.2rem 0 .15rem;
@@ -246,18 +251,67 @@
 body {
   padding-bottom: 38px;
 }
+.slogan {
+  font-family: 'Cormorant SC', serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.sub-slogan {
+  font-family: 'Cormorant SC', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  line-height: 1;
+  height: 45px; /* <-- fixe la hauteur du bouton */
+  overflow: hidden;
+}
+
+.btn-social.whatsapp {
+  background-color: #25D366;
+}
+
+.btn-social.instagram {
+  background-color: #C13584;
+}
+
+.icon {
+  height: 28px;
+  width: 28px;
+  display: block;
+}
+
+
     </style>
 
 
     <header>
-  <h1>Catalogue Maison Olfa</h1>
-  <p style="margin:.3rem 0 0; font-weight:600; color:#993254;">
-    Vos senteurs préférées à prix réduit
-    
+  <img src="img/logo.png" alt="Maison Olfa" style="max-height: 120px; margin-bottom: 0.5rem;">
+ <p class="slogan">Vos senteurs préférées à prix réduit</p>
+<p class="sub-slogan">Les dupes de meilleure qualité sont ici</p>
 
-  </p>
+</header>
+
   
-<p class="mini-subtitle">Les dupes de meilleure qualité sont ici</p>
+
 
   
 
@@ -265,7 +319,7 @@ body {
 
 <div class="search-section">
   <div class="search-bar">
-    <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Rechercher un parfum...">
+    <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Rechercher votre parfum...">
   </div>
   <div class="social-buttons">
     <a href="https://wa.me/1234567890" target="_blank" class="whatsapp">📲 WhatsApp</a>
@@ -281,6 +335,7 @@ body {
     Livraison dans toute la France 📦
   </p>
 </div>
+
 
 
 
